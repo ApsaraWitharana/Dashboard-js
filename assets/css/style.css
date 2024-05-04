@@ -113,3 +113,32 @@ body{
 
 }
 
+/* curve outsite */
+
+.navigating ul li:hover a::before{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -50px;
+    width: 50px;
+    height: 50px;
+    background-color:transparent;
+    border-radius: 50%;
+    /* boder ek wennwen tana nilpata ekth curve weenn top ek */
+    box-shadow: 35px 35px 0 10px var(--white);
+    pointer-events: none;
+}
+
+.navigating ul li:hover a::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    /* boder ek wennwen tana nilpata ekth curve weenn bottom ek */
+    box-shadow: 35px -35px 0 10px var(--white);
+    pointer-events: none;
+}
