@@ -310,6 +310,7 @@ body{
 }
 
 .details .recentOrders{
+
    position: relative;
    display: grid;
    min-height: 500px;
@@ -317,6 +318,7 @@ body{
    padding: 20px;
    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
    border-radius: 20px;
+   
 }
 
 .details .cardHeader{
@@ -470,7 +472,7 @@ body{
       margin-bottom: 10px;
       padding: 10px;
       font-size: 16px;
-      border-radius: 5px;
+      border-radius: 10px;
       border: 1px solid #ccc;
   }
 
@@ -480,7 +482,7 @@ body{
       border: none;
       cursor: pointer;
       display: flex;
-
+   
       /* padding: 2px ; */
       margin: 0 5px;
 
@@ -518,6 +520,8 @@ table tbody tr:hover {
 
   .btn {
       display: flex;
+      background-size: cover;
+      
       /* padding: 2px ;
     margin: 0 10px; */
   }
@@ -661,4 +665,60 @@ table tbody tr:hover {
         th {
             background-color: #0b0d0e;
             color: #fff;
+        }
+
+
+        /* ===============item card================ */
+
+        .cardBox2 {
+            position: relative;
+            width: 100%;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 30px;
+        }
+
+        .cardBox2 .card {
+            position: relative;
+            background: var(--white);
+            padding: 30px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+            box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .cardBox2 .card .numbers {
+            position: relative;
+            font-weight: 500;
+            font-size: 2.5rem;
+            color: var(--blue);
+        }
+                
+        .cardBox2 .card .cardName {
+            color: var(--black2);
+            font-size: 1.1rem;
+            margin-top: 5px;
+
+
+        }
+
+        .cardBox2 .card .iconBx {
+            width: 100px;
+            height: 100px;
+            color: var(--black2);
+        }
+
+        .cardBox2 .card:hover {
+            /* color: rgb(29, 22, 22);
+                            background-color: rgb(208, 203, 203); */
+            background: var(--blue);
+        }
+
+        .cardBox2 .card:hover .numbers,
+        .cardBox2 .card:hover .cardName,
+        .cardBox2 .card:hover .iconBx {
+            color: var(--white);
         }
