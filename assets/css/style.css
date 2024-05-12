@@ -415,3 +415,100 @@ body{
     font-size: 14px;
     font-weight: 500;
 }
+
+/* =========================================customer manage css==================================== */
+
+  body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+  }
+
+  .containerCustomer {
+      max-width: 700px;
+      /* margin: 50px auto; */
+      /* margin-left: 50px auto; */
+      margin: 10px 10px;
+      padding: 10px;
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  h1 {
+      text-align: center;
+      font-size: 16px;
+  }
+
+  /* #tables{
+    background-color: white;
+    width: 600px;
+  
+    margin-top: 100px auto;
+    margin-bottom: 100px auto;
+    margin-left: 100px auto;
+    margin-right: 200px auto;
+    align-items: center;
+    
+} */
+
+  form {
+      margin-bottom: 20px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  button {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+  }
+
+  button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      display: flex;
+
+      /* padding: 2px ; */
+      margin: 0 5px;
+
+  }
+
+  button:hover {
+      background-color: #0056b3;
+  }
+
+  table {
+      width: 600px;
+      border-collapse: collapse;
+      /* position: relative; */
+      margin: auto;
+      background-color: white;
+      border-radius: 12px;
+  }
+
+  th,
+  td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+  }
+
+  th {
+      background-color: #1e3043;
+      color: #fff;
+  }
+
+  .btn {
+      display: flex;
+      /* padding: 2px ;
+    margin: 0 10px; */
+  }

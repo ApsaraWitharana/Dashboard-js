@@ -1,157 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <title>Customer Management</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
-<body>
-    <!-- ======================Cards================================== -->
-    
-    <div class="cardBox">
-        <div class="card">
-            <div>
-                <div class="numbers">11,504</div>
-                <div class="cardName">Daily Amount</div>
-            </div>
-            <div class="iconBx">
-                <ion-icon name="pulse"></ion-icon>
-            </div>
-        </div>
-        <div class="card">
-            <div>
-                <div class="numbers">80</div>
-                <div class="cardName">Sales</div>
-            </div>
-            <div class="iconBx">
-                <ion-icon name="cart-outline"></ion-icon>
-            </div>
-        </div>
-        <div class="card">
-            <div>
-                <div class="numbers">284</div>
-                <div class="cardName">Customers</div>
-            </div>
-            <div class="iconBx">
-                <ion-icon name="people"></ion-icon>
-            </div>
-        </div>
-        <div class="card">
-            <div>
-                <div class="numbers">$7,842</div>
-                <div class="cardName">Earning</div>
-            </div>
-            <div class="iconBx">
-                <ion-icon name="cash-outline"></ion-icon>
-            </div>
-        </div>
-    </div>
-    
-    <!-- =============================order details=============================== -->
-    
-    <div class="details">
-        <div class="recentOrders">
-            <div class="cardHeader">
-                <h2>Recent Orders Today</h2>
-                <a href="#" class="btn">View All</a>
-            </div>
-            <table>
-                <thead>
-                    <tr>
-                        <td>Item Name</td>
-                        <td>Price</td>
-                        <td>Payment</td>
-                        <td>Status</td>
-    
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Biscuits</td>
-                        <td>1200</td>
-                        <td>Paid</td>
-                        <td><samp class="status delivered">Delivered</samp></td>
-    
-                    </tr>
-                    <tr>
-                        <td>Rice</td>
-                        <td>1200</td>
-                        <td>Due</td>
-                        <td><samp class="status pending">Pending</samp></td>
-    
-                    </tr>
-                    <tr>
-                        <td>Food</td>
-                        <td>1000</td>
-                        <td>Paid</td>
-                        <td><samp class="status return">Return</samp></td>
-    
-                    </tr>
-                    <tr>
-                        <td>Chicken</td>
-                        <td>2000</td>
-                        <td>Due</td>
-                        <td><samp class="status inProgress ">In Progress</samp></td>
-    
-                    </tr>
-                    <tr>
-                        <td>Star Refrigerator</td>
-                        <td>$1200</td>
-                        <td>Paid</td>
-                        <td><samp class="status delivered">Delivered</samp></td>
-    
-                    </tr>
-                    <tr>
-                        <td>Ricer</td>
-                        <td>1200</td>
-                        <td>Due</td>
-                        <td><samp class="status pending">Pending</samp></td>
-    
-                    </tr>
-                    <tr>
-                        <td>Food</td>
-                        <td>1000</td>
-                        <td>Paid</td>
-                        <td><samp class="status return">Return</samp></td>
-    
-                    </tr>
-                    <tr>
-                        <td>Chiken</td>
-                        <td>2000</td>
-                        <td>Due</td>
-                        <td><samp class="status inProgress ">In Progress</samp></td>
-    
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    
-        <!-- =======================================total sale today=========== -->
-    
-        <div class="cardBox">
-            <div class="card">
-                <div>
-                    <div style=" font-size: 3.5rem;color: var(--black2);" class="numbers">504</div>
-                    <div class="cardName">Quantity On Hand</div>
-                </div>
-                <div style=" font-size: 8.5rem;color:green" class="iconBx">
-                    <ion-icon name="reload">
-    
-                    </ion-icon>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-    </div>
-    
-    <script src="/assets/js/main.js"></script>
-    
-    
-    <!-- ===================ionicons=============== -->
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
 
+.container {
+    max-width: 500px;
+    margin: 75px auto;
+    margin-left: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    font-size: 16px;
+}
+
+/* #tables{
+    background-color: white;
+    width: 600px;
+  
+    margin-top: 100px auto;
+    margin-bottom: 100px auto;
+    margin-left: 100px auto;
+    margin-right: 200px auto;
+    align-items: center;
+    
+} */
+
+form {
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    
+    /* padding: 2px ; */
+    margin: 0 5px;
+    
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+table {
+    width: 600px;
+    border-collapse: collapse;
+    /* position: relative; */
+    margin: auto;
+    background-color: white;
+    border-radius: 12px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #1e3043;
+    color: #fff;
+}
+
+.btn{
+    display: flex;
+    /* padding: 2px ;
+    margin: 0 10px; */
+}
+
+</style>
+<body>
+    <div class="container">
+        <h1>Customer Management</h1>
+        <form id="customer-form">
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="text" id="address" placeholder="Address" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="tel" id="phone" placeholder="Phone" required>
+            <div class="btn">
+            <button type="submit">Add</button>
+            <button>Update</button>
+            <button>Delete</button>
+            </div>
+           
+        </form>
+        </div>
+
+        <div id="tables">
+            <h1>Customer Details</h1>
+        <table id="customer-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Customer data will be dynamically added here -->
+            </tbody>
+        </table>
+        </div>
+      
+    
+    <!-- <script src="script.js"></script> -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+                var form = document.getElementById('customer-form');
+                var table = document.getElementById('customer-table').getElementsByTagName('tbody')[0];
+
+                form.addEventListener('submit', function (event) {
+                    event.preventDefault();
+
+                    var name = document.getElementById('name').value;
+                    var address = document.getElementById('address').value;
+                    var email = document.getElementById('email').value;
+                    var phone = document.getElementById('phone').value;
+
+                    // Create a new row
+                    var newRow = table.insertRow(table.rows.length);
+
+                    // Insert cells into the row
+                    var cellName = newRow.insertCell(0);
+                    var cellAddress = newRow.insertCell(1);
+                    var cellEmail = newRow.insertCell(2);
+                    var cellPhone = newRow.insertCell(3);
+
+                    // Set cell values
+                    cellName.innerHTML = name;
+                    cellAddress.innerHTML = address;
+                    cellEmail.innerHTML = email;
+                    cellPhone.innerHTML = phone;
+
+                    // Clear form fields
+                    form.reset();
+                });
+            });
+
+    </script>
 </body>
+
 </html>
