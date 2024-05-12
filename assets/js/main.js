@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 form.addEventListener('submit', function (event) {
                     event.preventDefault();
 
+                    var id = document.getElementById('id').value;
                     var name = document.getElementById('name').value;
                     var address = document.getElementById('address').value;
                     var email = document.getElementById('email').value;
@@ -47,12 +48,14 @@ document.addEventListener('DOMContentLoaded', function () {
                     var newRow = table.insertRow(table.rows.length);
 
                     // Insert cells into the row
-                    var cellName = newRow.insertCell(0);
-                    var cellAddress = newRow.insertCell(1);
-                    var cellEmail = newRow.insertCell(2);
-                    var cellPhone = newRow.insertCell(3);
+                    var cellId = newRow.insertCell(0);
+                    var cellName = newRow.insertCell(1);
+                    var cellAddress = newRow.insertCell(2);
+                    var cellEmail = newRow.insertCell(3);
+                    var cellPhone = newRow.insertCell(4);
 
                     // Set cell values
+                    cellId.innerHTML = id;
                     cellName.innerHTML = name;
                     cellAddress.innerHTML = address;
                     cellEmail.innerHTML = email;
