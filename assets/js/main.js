@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     }else{
                         alert("Customer add successful! Thank you.");
                     }
-                    
+
                     // Create a new row
                     var newRow = table.insertRow(table.rows.length);
 
@@ -76,3 +76,43 @@ document.addEventListener('DOMContentLoaded', function () {
                     form.reset();
                 });
             });
+
+
+
+            // =======================================item management js==============================
+
+    document.addEventListener('DOMContentLoaded', function() {
+    var form = document.getElementById('item-form');
+    var itemList = document.getElementById('item-table').getElementsByTagName('tbody')[0];
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        var id = document.getElementById('id').value;
+        var name = document.getElementById('name').value;
+        var qty = parseInt(document.getElementById('qty').value);
+        var unitPrice = parseFloat(document.getElementById('unit-price').value);
+        var totalPrice = qty * unitPrice;
+
+        // Create a new row
+        var newRow = itemList.insertRow(itemList.rows.length);
+        // var newRow = itemList.insertRow();
+
+        // Insert cells into the row
+        var cellId = newRow.insertCell(0);
+        var cellName = newRow.insertCell(1);
+        var cellQty = newRow.insertCell(2);
+        var cellUnitPrice = newRow.insertCell(3);
+        var cellTotalPrice = newRow.insertCell(4);
+
+        // Set cell values
+        cellId.innerHTML = id;
+        cellName.innerHTML = name;
+        cellQty.innerHTML = qty;
+        cellUnitPrice.innerHTML = unitPrice.toFixed(2);
+        cellTotalPrice.innerHTML = totalPrice.toFixed(2);
+
+        // Clear form fields
+        form.reset();
+    });
+});

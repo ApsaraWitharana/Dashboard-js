@@ -248,8 +248,7 @@
     </form>
 </div>
 
-
-
+<!-- =================================table item==================== -->
 
 <div id="tables">
     <h1>Customer Details</h1>
@@ -342,6 +341,43 @@
     </table>
 </div>
 </div>
+
+<!-- ===============================item manage =========================================================== -->
+
+<div class="containerItem">
+    <h1>Item Management</h1>
+    <form id="item-form">
+       <input type="text" id="id" placeholder="Id:I-00">
+          <input type="text" id="name" placeholder="Name">
+        <input type="number" id="qty" placeholder="Quantity" required>
+        <input type="number" id="unit-price" placeholder="Unit Price" required>
+
+    <div class="btn">
+        <button type="submit">Add</button>
+        <button>Update</button>
+        <button>Delete</button>
+    </div>
+    </form>
+    </div>
+
+
+    <div id="Itemtables">
+        <h1>Item Details</h1>
+        <table id="item-table">
+            <thead>
+                <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Unit Price</th>
+                <th>Total Price</th>
+                </tr>
+            </thead>
+            <tbody >
+                <!-- Item data will be dynamically added here -->
+            </tbody>
+        </table>
+    </div>
 </div>
 </div>
 
