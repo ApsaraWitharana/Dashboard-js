@@ -34,7 +34,7 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="#item">
                     <span class="icon"><ion-icon name="pricetags-outline"></ion-icon></span>
                     <span class="title">Item</span>
                 </a>
@@ -340,44 +340,98 @@
         </tr>
     </table>
 </div>
-</div>
 
-<!-- ===============================item manage =========================================================== -->
 
+
+<!-- ============================================item manage =========================================================== -->
+<section id="item">
+    <!-- =============================card=================================== -->
+    <!-- <div class="cardBox2">
+        <div class="card">
+            <div>
+                <div class="numbers">11,504</div>
+                <div class="cardName">Daily Amount</div>
+            </div>
+            <div class="iconBx">
+                <ion-icon name="pulse"></ion-icon>
+            </div>
+        </div>
+        <div class="card">
+            <div>
+                <div class="numbers">80</div>
+                <div class="cardName">Sales</div>
+            </div>
+            <div class="iconBx">
+                <ion-icon name="cart-outline"></ion-icon>
+            </div>
+        </div>
+        <div class="card">
+            <div>
+                <div class="numbers">284</div>
+                <div class="cardName">Customers</div>
+            </div>
+            <div class="iconBx">
+                <ion-icon name="people"></ion-icon>
+            </div>
+        </div>
+        <div class="card">
+            <div>
+                <div class="numbers">$7,842</div>
+                <div class="cardName">Earning</div>
+            </div>
+            <div class="iconBx">
+                <ion-icon name="cash-outline"></ion-icon>
+            </div>
+        </div>
+    </div> -->
 <div class="containerItem">
     <h1>Item Management</h1>
     <form id="item-form">
-       <input type="text" id="id" placeholder="Id:I-00">
-          <input type="text" id="name" placeholder="Name">
+        <input type="text" id="id" placeholder="Id:I-00">
+        <input type="text" id="name" placeholder="Name">
         <input type="number" id="qty" placeholder="Quantity" required>
         <input type="number" id="unit-price" placeholder="Unit Price" required>
 
-    <div class="btn">
-        <button type="submit">Add</button>
-        <button>Update</button>
-        <button>Delete</button>
-    </div>
+        <div class="btn">
+            <button type="submit">Add</button>
+            <button>Update</button>
+            <button>Delete</button>
+        </div>
     </form>
-    </div>
+</div>
 
-
-    <div id="Itemtables">
-        <h1>Item Details</h1>
-        <table id="item-table">
-            <thead>
-                <tr>
+<div id="Itemtables">
+    <h1>Item Details</h1>
+    <table id="item-table">
+        <thead>
+            <tr>
                 <th>ID</th>
                 <th>Name</th>
                 <th>Quantity</th>
                 <th>Unit Price</th>
                 <th>Total Price</th>
-                </tr>
-            </thead>
-            <tbody >
-                <!-- Item data will be dynamically added here -->
-            </tbody>
-        </table>
-    </div>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Item data will be dynamically added here -->
+        </tbody>
+    </table>
+</div>
+
+</section>
+<!-- <div class="cardBox">
+    <div class="card">
+        <div>
+            <div style=" font-size: 3.5rem;color: var(--black2);" class="numbers">504</div>
+            <div class="cardName">Quantity On Hand</div>
+            <h3 style="font-size: 3.5rem;color: var(--black2);">85%</h3>
+        </div>
+        <div style=" font-size: 8.5rem;color:green" class="iconBx">
+            <ion-icon name="reload">
+
+            </ion-icon>
+        </div> -->
+
 </div>
 </div>
 

@@ -501,7 +501,7 @@ body{
 
 table tbody tr:hover {
     cursor: pointer;
-    background: var(--blue);
+    background: var(--black2);
     color: var(--white);
 }
   th,
@@ -512,7 +512,7 @@ table tbody tr:hover {
   }
 
   th {
-      background-color: #1e3043;
+      background-color: #090b0c;
       color: #fff;
   }
 
@@ -635,7 +635,11 @@ table tbody tr:hover {
         button:hover {
             background-color: #0056b3;
         }
-    
+/*     
+        .Itemtables{
+
+            margin: 10px auto;
+        } */
         table {
             width: 600px;
             border-collapse: collapse;
@@ -655,6 +659,6 @@ table tbody tr:hover {
         }
     
         th {
-            background-color: #007bff;
+            background-color: #0b0d0e;
             color: #fff;
         }
