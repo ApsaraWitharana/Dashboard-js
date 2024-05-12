@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Management</title>
+    <link rel="stylesheet" href="/assets/css/item.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Item Management</h1>
+        <form id="item-form">
+            <input type="text" id="id" placeholder="ID" required>
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="number" id="qty" placeholder="Quantity" required>
+            <input type="number" id="amount" placeholder="Amount" required>
+            <button type="submit">Add Item</button>
+        </form>
+        <table id="item-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Quantity</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody id="item-list">
+                <!-- Item data will be dynamically added here -->
+            </tbody>
+        </table>
+    </div>
+    <script src="/assets/js/item.js"></script>
+</body>
+
+</html>

@@ -1,34 +1,3 @@
-
-// add hovered class to selected list item
-
-let list = document.querySelectorAll(".navigating li");
-
-function activeLink(){
-    list.forEach(item=>{
-        item.classList.remove("hovered");
-    })
-
-    this.classList.remove("hovered");
-
-}
-
-list.forEach(item => item.addEventListener("mouseover",activeLink))
-
-//menu ioggle
-
-let toggle = document.querySelector('.toggle');
-let navigation = document.querySelector('.navigating');
-let main = document.querySelector('.main');
-
-
-toggle.onclick =function(){
-
-    navigation.classList.toggle('active');
-    main.classList.toggle('active');
-
-};
-
-
 // ==========================customer manage js==========================
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -44,8 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     var email = document.getElementById('email').value;
                     var phone = document.getElementById('phone').value;
 
-
-                     //validating customer
+                    //validating customer
                     if (id === "" || name === "" || address === "" || email === "" || phone === "") {
                      alert("Please fill in all fields.");
                      return false;
@@ -54,7 +22,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     }else{
                         alert("Customer add successful! Thank you.");
                     }
-                    
                     // Create a new row
                     var newRow = table.insertRow(table.rows.length);
 
