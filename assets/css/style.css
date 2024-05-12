@@ -339,6 +339,10 @@ body{
     border-radius: 8px;
 }
 
+.cardBox .card .cardName h3{
+    font-size: 17px;
+    font-weight: 600;
+}
 .details table {
     width: 100%;
     border-collapse: collapse;
