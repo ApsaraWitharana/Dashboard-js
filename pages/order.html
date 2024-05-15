@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Order Management</title>
+    <link rel="stylesheet" href="/assets/css/order.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Order Management</h1>
+        <div class="order">
+            
+            <label for="itemSelect">Select Item ID:</label>
+            <select id="itemSelect">
+                <!-- Items will be dynamically added here -->
+            </select>
+            <label for="itemSelect">Select Item Name:</label>
+            <select id="itemSelect">
+                <!-- Items will be dynamically added here -->
+            </select>
+            <label for="itemSelect">Select Item QTY:</label>
+            <input type="number" id="quantityInput" min="1" value="1">
+            <button id="addItemBtn">Add Item</button>
+
+             <div id="totalPrice"></div>
+        </div>
+        <div id="orderTable">
+            <table id="ordersTable">
+                <thead>
+                    <tr>
+                        <th>Item ID</th>
+                        <th>Name</th>
+                        <th>Quantity</th>
+                        <th>Unit Price</th>
+                        <th>Total Price</th>
+                    </tr>
+                    <tr>
+                        <td>I-001</td>
+                        <td>Nadu Rice</td>
+                        <td>100</td>
+                        <td>150</td>
+                        <td>15000</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Orders will be dynamically added here -->
+                </tbody>
+            </table>
+          
+        </div>
+        <button id="placeOrderBtn">Place Order</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/assets/js/order.js"></script>
+</body>
+
+</html>
