@@ -722,3 +722,63 @@ table tbody tr:hover {
         .cardBox2 .card:hover .iconBx {
             color: var(--white);
         }
+
+
+        /* ======================================================order management==================================================== */
+
+        body {
+    font-family: Arial, sans-serif;
+}
+
+.containerOrder {
+    /* max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center; */
+
+        max-width: 700px;
+            /* margin: 50px auto; */
+            /* margin-left: 50px auto; */
+            margin: 10px 10px;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+/* .order{
+    border: 1px solid black;
+    border-radius: 12px;
+    width: 400px;
+    height: 400px;
+    margin: 20px auto;
+    background-color: #f2f2f2;
+} */
+#itemSelect,
+#quantityInput,
+#addItemBtn {
+    margin: 10px;
+}
+
+#orderTable {
+    margin-top: 20px;
+}
+
+/* table {
+    width: 100%;
+    border-collapse: collapse;
+} */
+
+/* th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+} */
+
+#totalPrice {
+    margin-top: 10px;
+}
+

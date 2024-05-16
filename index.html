@@ -408,6 +408,64 @@
             </ion-icon>
         </div> -->
 
+
+        <!-- ==========================================order management============================================== -->
+
+
+        <div class="containerOrder">
+            <h1>Order Management</h1>
+            <div class="order">
+        
+                <label for="itemSelect">Select Item ID:</label>
+                <select id="itemSelect">
+                    <!-- Items will be dynamically added here -->
+                </select>
+                <label for="itemSelect">Select Item Name:</label>
+                <select id="itemSelect">
+                    <!-- Items will be dynamically added here -->
+                </select>
+                <label for="itemSelect">Select Item QTY:</label>
+                <input type="number" id="quantityInput" min="1" value="1">
+                <button id="addItemBtn">Add Item</button>
+        </div>
+                <div id="totalPrice"></div>
+            </div>
+            <div id="orderTable">
+                <table id="ordersTable">
+                    <thead>
+                        <tr>
+                            <th>Item ID</th>
+                            <th>Name</th>
+                            <th>Quantity</th>
+                            <th>Unit Price</th>
+                            <th>Total Price</th>
+                        </tr>
+                        <tr>
+                            <td>I-001</td>
+                            <td>Nadu Rice</td>
+                            <td>100</td>
+                            <td>150</td>
+                            <td>15000</td>
+                        </tr>
+                        <tr>
+                            <td>I-002</td>
+                            <td>punni samba Rice</td>
+                            <td>100</td>
+                            <td>200</td>
+                            <td>10000</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Orders will be dynamically added here -->
+                    </tbody>
+                </table>
+        
+            </div>
+            <button id="placeOrderBtn">Place Order</button>
+        
+        </div>
+
+
 </div>
 </div>
 
@@ -415,6 +473,7 @@
 
 
 <!-- ===================ionicons=============== -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
