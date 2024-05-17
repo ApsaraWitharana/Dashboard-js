@@ -232,6 +232,7 @@
     <!-- ==========================================customer Management================================= -->
 
     <section id="customer">
+        <h2 style="border: 1px solid black; border-radius: 6px;text-align: center; margin: 40px 20px 40px">Customer</h2>
 <div class="containerCustomer">
     <h1>Customer Management</h1>
     <form id="customer-form">
@@ -260,6 +261,13 @@
                 <th>Address</th>
                 <th>Email</th>
                 <th>Phone</th>
+            </tr>
+            <tr>
+                <td>C-001</td>
+                <td>Sachini Apsara</td>
+                <td>Matara</td>
+                <td>sachi@gmail.com</td>
+                <td>0713085428</td>
             </tr>
         </thead>
         <tbody>
@@ -346,6 +354,7 @@
 
 <!-- ============================================item manage =========================================================== -->
 <section id="item">
+    <h2 style="border: 1px solid black; border-radius: 6px;text-align: center; margin: 40px 20px 40px">Item</h2>
     <!-- =============================card=================================== -->
     <h1 style="align-items: center; font-size: 25px;">Today Discount Product</h1>
 <div class="cardBox">
@@ -381,7 +390,7 @@
     <div class="card">
         <div>
             <div class="numbers">25%</div>
-            <div class="cardName">Earning</div>
+            <div class="cardName">Spashal</div>
         </div>
         <div class="iconBx">
         <img style="width: 100px; height: 100px;" src="/assets/image/foods.jpeg" alt="">
@@ -419,6 +428,13 @@
                 <th>Unit Price</th>
                 <th>Total Price</th>
             </tr>
+            <tr>
+                <td>I-001</td>
+                <td>Nadu Rice</td>
+                <td>100</td>
+                <td>150</td>
+                <td>15000</td>
+            </tr>
         </thead>
         <tbody>
             <!-- Item data will be dynamically added here -->
@@ -444,68 +460,68 @@
         <!-- ==========================================order management============================================== -->
 
 <section id="order">
+    <h2 style="border: 1px solid black; border-radius: 6px;text-align: center; margin: 40px 20px 40px">Order</h2>
+    <div class="containerOrder">
+        <h1>Order Management</h1>
+        <div class="order">
+    
+            <label for="itemSelect">Select Item ID:</label>
+            <select id="itemSelect">
+                <!-- Items will be dynamically added here -->
+            </select>
+            <label for="itemSelect">Select Item Name:</label>
+            <select id="itemSelect">
+                <!-- Items will be dynamically added here -->
+            </select>
+            <label for="itemSelect">Select Item QTY:</label>
+            <input type="number" id="quantityInput" min="1" value="1">
+            <button id="addItemBtn">Add Item</button>
+            
+            <div id="totalPrice"></div>
+        </div>
+        </div>
         <div class="containerOrder">
-            <h1>Order Management</h1>
-            <div class="order">
-                <label for="itemSelect">Select Item ID:</label>
-                <select id="itemSelect">
-                    <!-- Items will be dynamically added here -->
-                </select>
-                <br>
-                <label for="itemSelect">Select Item Name:</label>
-                <select id="itemSelect">
-                    <!-- Items will be dynamically added here -->
-                </select>
-                <br>
-                <label for="itemSelect">Select Item QTY:
-                <input type="number" id="quantityInput" min="1" value="1">
-                </label>
-                <br>
-                <button id="addItemBtn">Add Item</button>
+        <div id="orderTable">
+            <table id="ordersTable">
+                <thead>
+                    <tr>
+                        <th>Item ID</th>
+                        <th>Name</th>
+                        <th>Quantity</th>
+                        <th>Unit Price</th>
+                        <th>Total Price</th>
+                    </tr>
+                    <tr>
+                        <td>I-001</td>
+                        <td>Nadu Rice</td>
+                        <td>100</td>
+                        <td>150</td>
+                        <td>15000</td>
+                    </tr>
+                    <tr>
+                        <td>I-002</td>
+                        <td>punni samba Rice</td>
+                        <td>100</td>
+                        <td>200</td>
+                        <td>10000</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Orders will be dynamically added here -->
+                </tbody>
+            </table>
+    </div>
         </div>
-                <div id="totalPrice"></div>
-            </div>
-            <div id="orderTable">
-                <table id="ordersTable">
-                    <thead>
-                        <tr>
-                            <th>Item ID</th>
-                            <th>Name</th>
-                            <th>Quantity</th>
-                            <th>Unit Price</th>
-                            <th>Total Price</th>
-                        </tr>
-                        <tr>
-                            <td>I-001</td>
-                            <td>Nadu Rice</td>
-                            <td>100</td>
-                            <td>150</td>
-                            <td>15000</td>
-                        </tr>
-                        <tr>
-                            <td>I-002</td>
-                            <td>punni samba Rice</td>
-                            <td>100</td>
-                            <td>200</td>
-                            <td>10000</td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Orders will be dynamically added here -->
-                    </tbody>
-                </table>
-        
-            </div>
-            <button id="placeOrderBtn">Place Order</button>
-        
-        </div>
+        <button id="placeOrderBtn">Place Order</button>
+  
 
 </section>
 </div>
 </div>
 
     <script src="/assets/js/main.js"></script>
-
+    <script src="/assets/js/order.js"></script>
+   
 
 <!-- ===================ionicons=============== -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
