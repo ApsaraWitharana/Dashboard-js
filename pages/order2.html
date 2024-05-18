@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Management</title>
+    <link rel="stylesheet" href="/assets/css/order2.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Order Management System</h1>
+
+        <form id="orderForm">
+            <div>
+                <label for="orderId">Order ID:</label>
+                <input type="text" id="orderId" readonly>
+            </div>
+            <div>
+                <label for="orderDate">Date:</label>
+                <input type="text" id="orderDate" readonly>
+            </div>
+            <div>
+                <label for="customerSearch">Customer:</label>
+                <input type="text" id="customerSearch" placeholder="Search Customer">
+                <button type="button" id="searchCustomerBtn">Search</button>
+            </div>
+            <div>
+                <label for="itemSearch">Item:</label>
+                <input type="text" id="itemSearch" placeholder="Search Item">
+                <button type="button" id="searchItemBtn">Search</button>
+            </div>
+            <div>
+                <label for="itemQty">Quantity:</label>
+                <input type="number" id="itemQty" min="1">
+            </div>
+            <button type="button" id="addItemBtn">Add Item</button>
+        </form>
+
+        <h2>Customer Details</h2>
+        <table id="customerDetailsTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Email</th>
+                    <th>Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Customer details will be dynamically loaded here -->
+            </tbody>
+        </table>
+
+        <h2>Item Details</h2>
+        <table id="itemDetailsTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Item details will be dynamically loaded here -->
+            </tbody>
+        </table>
+
+        <h2>Order Summary</h2>
+        <table id="orderSummaryTable">
+            <thead>
+                <tr>
+                    <th>Item ID</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Order items will be dynamically added here -->
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4">Total Amount</td>
+                    <td id="totalAmount">$0.00</td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/assets/js/order2.js"></script>
+</body>
+
+</html>
