@@ -230,54 +230,52 @@
     
 
     <!-- ==========================================customer Management================================= -->
-
-    <section id="customer">
-        <h2 style="border: 1px solid black; border-radius: 6px;text-align: center; margin: 40px 20px 40px">Customer</h2>
-<div class="containerCustomer">
-    <h1>Customer Management</h1>
-    <form id="customer-form">
-        <input type="text" id="id" placeholder="Id:C-00" >
-        <input type="text" id="name" placeholder="Name" >
-        <input type="text" id="address" placeholder="Address" >
-        <input type="email" id="email" placeholder="Email" >
-        <input type="tel" id="phone" placeholder="Phone" >
-        <div class="btn">
-            <button type="submit">Add</button>
-            <button>Update</button>
-            <button>Delete</button>
-        </div>
-    </form>
-</div>
-
-<!-- =================================table item==================== -->
-<div class="containerCustomer">
-<div id="tables">
-    <h1>Customer Details</h1>
-    <table id="customer-table">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Address</th>
-                <th>Email</th>
-                <th>Phone</th>
-            </tr>
-            <tr>
-                <td>C-001</td>
-                <td>Sachini Apsara</td>
-                <td>Matara</td>
-                <td>sachi@gmail.com</td>
-                <td>0713085428</td>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Customer data will be dynamically added here -->
-        </tbody>
-      </table>
+<section id="customer">
+    <h2 style="border: 1px solid black; border-radius: 6px;text-align: center; margin: 40px 20px 40px">Customer</h2>
+    <div class="containerCustomer">
+        <h1>Customer Management</h1>
+        <form id="customer-form">
+            <input type="text" id="id" placeholder="Id:C-00">
+            <input type="text" id="name" placeholder="Name">
+            <input type="text" id="address" placeholder="Address">
+            <input type="email" id="email" placeholder="Email">
+            <input type="tel" id="phone" placeholder="Phone">
+            <div class="btn">
+                <button type="submit">Add</button>
+                <button>Update</button>
+                <button>Delete</button>
+            </div>
+        </form>
     </div>
-</div>
+
+    <!-- =================================table item==================== -->
+    <div class="containerCustomer">
+        <div id="tables">
+            <h1>Customer Details</h1>
+            <table id="customer-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                    </tr>
+                    <tr>
+                        <td>C-001</td>
+                        <td>Sachini Apsara</td>
+                        <td>Matara</td>
+                        <td>sachi@gmail.com</td>
+                        <td>0713085428</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Customer data will be dynamically added here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
     </section>
-    
 <!-- ========================customers========================= -->
 
 
@@ -461,66 +459,68 @@
 
 <section id="order">
     <h2 style="border: 1px solid black; border-radius: 6px;text-align: center; margin: 40px 20px 40px">Order</h2>
-    <div class="containerOrder">
-        <h1>Order Management</h1>
-        <div class="order">
-    
-            <label for="itemSelect">Select Item ID:</label>
-            <select id="itemSelect">
-                <!-- Items will be dynamically added here -->
-            </select>
-            <label for="itemSelect">Select Item Name:</label>
-            <select id="itemSelect">
-                <!-- Items will be dynamically added here -->
-            </select>
-            <label for="itemSelect">Select Item QTY:</label>
-            <input type="number" id="quantityInput" min="1" value="1">
-            <button id="addItemBtn">Add Item</button>
-            
-            <div id="totalPrice"></div>
-        </div>
-        </div>
-        <div class="containerOrder">
-        <div id="orderTable">
-            <table id="ordersTable">
-                <thead>
-                    <tr>
-                        <th>Item ID</th>
-                        <th>Name</th>
+    <div class="containerMenu">
+        <h1>Menu</h1>
+        <table id="menuTable">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Price</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Pizza</td>
+                    <td>$10.00</td>
+                    <td><button class="add-to-order">Add to Order</button></td>
+                </tr>
+                <tr>
+                    <td>Burger</td>
+                    <td>$8.00</td>
+                    <td><button class="add-to-order">Add to Order</button></td>
+                </tr>
+                <tr>
+                    <td>Pasta</td>
+                    <td>$12.00</td>
+                    <td><button class="add-to-order">Add to Order</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Order Summary</h2>
+        <div id="orderSummary">
+            <table>
+
+                <thead id="col">
+                    <tr id="col-tr">
+                        <th>Item</th>
+                        <th>Price</th>
                         <th>Quantity</th>
-                        <th>Unit Price</th>
-                        <th>Total Price</th>
-                    </tr>
-                    <tr>
-                        <td>I-001</td>
-                        <td>Nadu Rice</td>
-                        <td>100</td>
-                        <td>150</td>
-                        <td>15000</td>
-                    </tr>
-                    <tr>
-                        <td>I-002</td>
-                        <td>punni samba Rice</td>
-                        <td>100</td>
-                        <td>200</td>
-                        <td>10000</td>
+                        <th>Total</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <!-- Orders will be dynamically added here -->
+
+                <tbody id="orderItems">
+                    <!-- Order items will be added here dynamically -->
                 </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">Total Amount</td>
+                        <td id="totalAmount">$0.00</td>
+                    </tr>
+                    
+                </tfoot>
             </table>
-    </div>
         </div>
-        <button id="placeOrderBtn">Place Order</button>
-  
-
-</section>
+    </div>
 </div>
 </div>
 
+
+   
+    
     <script src="/assets/js/main.js"></script>
-    <script src="/assets/js/order.js"></script>
+   
    
 
 <!-- ===================ionicons=============== -->

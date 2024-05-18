@@ -180,3 +180,135 @@ document.addEventListener('DOMContentLoaded', function () {
 //         placeOrder();
 //     });
 // });
+
+
+
+
+// =====================================================menu=====================================================
+
+//script.js
+
+$(document).ready(function() {
+    let order = {};
+
+    $('.add-to-order').click(function() {
+        let row = $(this).closest('tr');
+        let item = row.find('td:nth-child(1)').text();
+        let price = parseFloat(row.find('td:nth-child(2)').text().replace('Rs', ''));
+
+        if (order[item]) {
+            order[item].quantity += 1;
+            order[item].total = order[item].quantity * price;
+        } else {
+            order[item] = { price: price, quantity: 1, total: price };
+        }
+
+        updateOrderSummary();
+
+    });
+
+
+    function updateOrderSummary() {
+        let orderItems = $('#orderItems');
+        orderItems.empty();
+        let totalAmount = 0;
+
+        $.each(order, function(item, details) {
+            orderItems.append(`
+                <tr>
+                    <td>${item}</td>
+                    <td>$${details.price.toFixed(2)}</td>
+                    <td>${details.quantity}</td>
+                    <td>$${details.total.toFixed(2)}</td>
+                </tr>
+
+            `);
+            totalAmount += details.total;
+        });
+
+        $('#totalAmount').text(`Rs${totalAmount.toFixed(2)}`);
+    }
+});
+
+
+// ====================customer================
+
+ $(document).ready(function () {
+                let customers = [];
+                let currentCustomerId = null;
+
+                function resetForm() {
+                    $('#customerId').val('');
+                    $('#customerName').val('');
+                    $('#customerAddress').val('');
+                    $('#customerEmail').val('');
+                    $('#customerSalary').val('');
+                    $('#saveCustomerBtn').text('Add Customer');
+                }
+
+                function renderTable() {
+                    let customerTable = $('#customerTable tbody');
+                    customerTable.empty();
+
+                    customers.forEach((customer, index) => {
+                        customerTable.append(`
+                <tr>
+                    <td>${index + 1}</td>
+                    <td>${customer.name}</td>
+                    <td>${customer.address}</td>
+                    <td>${customer.email}</td>
+                    <td>${customer.salary}</td>
+                    <td class="actions">
+                        <button class="edit-btn" data-id="${index}">Edit</button>
+                        <button class="delete-btn" data-id="${index}">Delete</button>
+                    </td>
+                </tr>
+            `);
+                    });
+                }
+
+                $('#customerForm').submit(function (event) {
+                    event.preventDefault();
+
+                    let id = $('#customerId').val();
+                    let name = $('#customerName').val();
+                    let address = $('#customerAddress').val();
+                    let email = $('#customerEmail').val();
+                    let salary = $('#customerSalary').val();
+
+                    if (id) {
+                        customers[id] = { name, address, email, salary };
+                    } else {
+                        customers.push({ name, address, email, salary });
+                    }
+
+                    resetForm();
+                    renderTable();
+                });
+
+                $('#customerTable').on('click', '.edit-btn', function () {
+                    let id = $(this).data('id');
+                    let customer = customers[id];
+
+                    $('#customerId').val(id);
+                    $('#customerName').val(customer.name);
+                    $('#customerAddress').val(customer.address);
+                    $('#customerEmail').val(customer.email);
+                    $('#customerSalary').val(customer.salary);
+                    $('#saveCustomerBtn').text('Update Customer');
+                });
+
+                $('#customerTable').on('click', '.delete-btn', function () {
+                    let id = $(this).data('id');
+                    customers.splice(id, 1);
+                    renderTable();
+                });
+
+                $('#clearAllBtn').click(function () {
+                    customers = [];
+                    renderTable();
+                });
+
+                renderTable();
+            });
+

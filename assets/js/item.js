@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var cellName = newRow.insertCell(1);
         var cellQty = newRow.insertCell(2);
         var cellAmount = newRow.insertCell(3);
-
+        
         // Set cell values
         cellId.textContent = id;
         cellName.textContent = name;

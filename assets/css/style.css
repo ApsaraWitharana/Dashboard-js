@@ -777,7 +777,7 @@ td {
 
 th {
     background-color: #f2f2f2;
-}
+}*/
 
 #totalPrice {
     margin-top: 10px;
@@ -802,9 +802,72 @@ th {
     /* padding: 2px ; */
     margin: 0 5px;
 
-}
+} 
+
+/* .addItemBtn{
+    width: 100px;
+    height: 50px;
+} */
 
 button:hover {
     background-color: #0056b3;
 }
+
+
+/* ================================menu table=================================================== */
+
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.containerMenu {
+    width: 80%;
+    margin: 0 auto;
+
+         /* max-width: 700px;
+            /* margin: 50px auto; */
+            /* margin-left: 50px auto; */
+            /* margin: 10px 10px;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  */ 
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+
+.col {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+.col th {
+    background-color: #f4f4f4;
+} 
+
+ .add-to-order {
+    padding: 5px 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.add-to-order:hover {
+    background-color: #218838;
+}
+
+
 

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Order Management</title>
+    <link rel="stylesheet" href="/assets/css/menu.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Menu</h1>
+        <table id="menuTable">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Price</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Pizza</td>
+                    <td>$10.00</td>
+                    <td><button class="add-to-order">Add to Order</button></td>
+                </tr>
+                <tr>
+                    <td>Burger</td>
+                    <td>$8.00</td>
+                    <td><button class="add-to-order">Add to Order</button></td>
+                </tr>
+                <tr>
+                    <td>Pasta</td>
+                    <td>$12.00</td>
+                    <td><button class="add-to-order">Add to Order</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Order Summary</h2>
+        <div id="orderSummary">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody id="orderItems">
+                    <!-- Order items will be added here dynamically -->
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">Total Amount</td>
+                        <td id="totalAmount">$0.00</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/assets/js/menu.js"></script>
+</body>
+
+</html>
