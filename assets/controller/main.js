@@ -312,3 +312,106 @@ $(document).ready(function() {
                 renderTable();
             });
 
+
+            // ==================customer===================
+
+             document.addEventListener('DOMContentLoaded', function () {
+                const customers = [];
+                let nextCustomerId = 1;
+
+                const addCustomerBtn = document.getElementById('addCustomerBtn');
+                const customerModal = document.getElementById('customerModal');
+                const closeBtn = document.querySelector('.closeBtn');
+
+                addCustomerBtn.onclick = () => {
+                    openCustomerModal();
+                };
+
+                closeBtn.onclick = () => {
+                    customerModal.style.display = 'none';
+                };
+
+                window.onclick = (event) => {
+                    if (event.target == customerModal) {
+                        customerModal.style.display = 'none';
+                    }
+                };
+
+                document.getElementById('customerForm').onsubmit = (e) => {
+                    e.preventDefault();
+                    saveCustomer(customers);
+                };
+
+                loadCustomers(customers);
+
+                function loadCustomers(customers) {
+                    const tableBody = document.querySelector('#customerTable tbody');
+                    tableBody.innerHTML = '';
+                    customers.forEach(customer => {
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                <td>${customer.id}</td>
+                <td>${customer.name}</td>
+                <td>${customer.salary}</td>
+                <td>${customer.address}</td>
+                <td>
+                    <button class="updateBtn" onclick="openCustomerModal(${customer.id}, '${customer.name}', ${customer.salary}, '${customer.address}')">✏️</button>
+                    <button class="deleteBtn" onclick="deleteCustomer(${customer.id}, this, customers)">🗑️</button>
+                </td>
+            `;
+                        tableBody.appendChild(row);
+                    });
+                }
+
+                function openCustomerModal(id = '', name = '', salary = '', address = '') {
+                    document.getElementById('customerId').value = id;
+                    document.getElementById('customerName').value = name;
+                    document.getElementById('customerSalary').value = salary;
+                    document.getElementById('customerAddress').value = address;
+                    document.getElementById('modalTitle').textContent = id ? 'Update Customer' : 'Add Customer';
+                    customerModal.style.display = 'block';
+                }
+
+                function saveCustomer(customers) {
+                    const id = document.getElementById('customerId').value;
+                    const name = document.getElementById('customerName').value;
+                    const salary = document.getElementById('customerSalary').value;
+                    const address = document.getElementById('customerAddress').value;
+
+                    if (id) {
+                        // Update existing customer
+                        const customer = customers.find(c => c.id == id);
+                        customer.name = name;
+                        customer.salary = salary;
+                        customer.address = address;
+                    } else {
+                        // Add new customer
+                        const newCustomer = {
+                            id: nextCustomerId++,
+                            name: name,
+                            salary: salary,
+                            address: address
+                        };
+                        customers.push(newCustomer);
+                    }
+
+                    loadCustomers(customers);
+                    customerModal.style.display = 'none';
+                }
+
+                function deleteCustomer(id, button, customers) {
+                    if (confirm(`Are you sure you want to delete customer ${id}?`)) {
+                        const index = customers.findIndex(customer => customer.id == id);
+                        if (index !== -1) {
+                            customers.splice(index, 1);
+                            const row = button.parentNode.parentNode;
+                            row.remove();
+                        }
+                    }
+                }
+
+                // Expose functions to global scope to be callable from inline event handlers
+                window.openCustomerModal = openCustomerModal;
+                window.deleteCustomer = deleteCustomer;
+            });
+

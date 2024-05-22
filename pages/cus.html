@@ -5,180 +5,211 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>POS Customer Management</title>
-    <div class="container mt-7 p-2">
-        <div class="row justify-content-center">
-            <div class="col-md-4">
-                <div class="card shadow-lg">
-                    <div class="card-header">
-                        <h5 class="card-title text-start text-white">Customer Search</h5>
-                    </div>
-                    <div class="card-body">
-                        <div class="mb-3">
-                            <input class="form-control" id="srcCusID" placeholder="Input Name/ID/Tp Here" type="text">
-                        </div>
-                        <div class=" justify-content-between">
-                            <button type="button" class="btn btn-success text-white">Search</button>
-    
-                            <button class="btn btn-outline-dark dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Name
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item active" href="#">Name</a></li>
-                                <li><a class="dropdown-item" href="#">ID</a></li>
-                                <li><a class="dropdown-item" href="#">TP</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <div class="recentCustomer">
-                    <div class="cardHeader">
-                        <h2>Recent Customer</h2>
-                    </div>
-                    <table>
-                        <tr>
-                            <td width="40px">
-                                <div class="imgBx"><img
-                                        src="/assest/image/WhatsApp Image 2024-05-12 at 18.09.35_400c3969.jpg" alt="">
-                                </div>
-                            </td>
-                            <td>
-                                <h4>Sachini <span>Apsara</span></h4>
-                                <h5>Matara</h5>
-                            </td>
-    
-                        </tr>
-                        <tr>
-                            <td width="40px">
-                                <div class="imgBx"><img src="assest/image/duvi fb image.jpg" alt=""></div>
-                            </td>
-                            <td>
-                                <h4>Savindu <span>Thathsara</span></h4>
-                                <h5>Galle</h5>
-                            </td>
-    
-                        </tr>
-                        <tr>
-                            <td width="40px">
-                                <div class="imgBx"><img
-                                        src="/assest/image/WhatsApp Image 2024-03-16 at 08.34.05_4b3f8565.jpg" alt="">
-                                </div>
-                            </td>
-                            <td>
-                                <h4>Sachindu <span>Sadaruwan</span></h4>
-                                <h5>Matara</h5>
-                            </td>
-    
-                        </tr>
-                        <tr>
-                            <td width="40px">
-                                <div class="imgBx"><img
-                                        src="assest/image/WhatsApp Image 2024-03-21 at 10.52.37_94ff49ca.jpg" alt="">
-                                </div>
-                            </td>
-                            <td>
-                                <h4>Ruwani <span>Bdilshani</span></h4>
-                                <h5>Kandy</h5>
-                            </td>
-    
-                        </tr>
-                        <tr>
-                            <td width="40px">
-                                <div class="imgBx"><img src="assest/image/stylish-dp-for-girls-wp-pr.jpg" alt=""></div>
-                            </td>
-                            <td>
-                                <h4>Anu <span>Apsara</span></h4>
-                                <h5>Colombo</h5>
-                            </td>
-    
-                        </tr>
-                        <tr>
-                            <td width="40px">
-                                <div class="imgBx"><img src="assest/image/stylish-dp-for-girls-wp-pr.jpg" alt=""></div>
-                            </td>
-                            <td>
-                                <h4>Thumali <span>Iduwari</span></h4>
-                                <h5>Colombo</h5>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-    
-            <div class="col-md-5">
-                <div class="container mt-7">
-                    <div class="row justify-content-center">
-                        <div class="col-md-10">
-                            <div class="card shadow-lg">
-                                <div class="card-header">
-                                    <h5 class="card-title text-start text-white">New Customer</h5>
-                                </div>
-                                <div class="card-body">
-                                    <form>
-                                        <div class="form-group" id="cusidDiv">
-                                            <label for="customerID" class="fw-bold">Customer ID:</label>
-                                            <input type="text" class="form-control" id="customerID" placeholder="C00-001"
-                                                onkeyup="checkIdField()">
-                                            <span class="errorMessageId">cus id is required field: Pattern C00-000
-                                            </span>
-                                        </div>
-                                        <div class="form-group mt-2">
-                                            <label for="customerName" class="fw-bold">Customer Name:</label>
-                                            <input type="text" class="form-control" id="customerName" placeholder="Sachini"
-                                                onkeyup="checkNameField()">
-                                            <span class="errorMessageName">cus name is required field: Minimum 5,Max
-                                                20, Space Allowed </span>
-                                        </div>
-                                        <div class="form-group mt-2">
-                                            <label for="customerAddress" class="fw-bold">Customer Address:</label>
-                                            <input type="text" class="form-control" id="customerAddress"
-                                                placeholder="Matara" onkeyup="checkFieldAddress()">
-                                            <span class="errorMessageAddress">cus Address is required field: Minimum
-                                                7 </span>
-                                        </div>
-                                        <div class="form-group mt-2">
-                                            <label for="customerSalary" class="fw-bold">Customer Salary:</label>
-                                            <input type="text" class="form-control" id="customerSalary"
-                                                placeholder="2000.00" onkeyup="checkFieldSalary()">
-                                            <span class="errorMessageSalary">cus Salary is required field: Pattern
-                                                100.00 or 100 </span>
-                                        </div>
-                                        <div class="form-group text-center mt-4">
-                                            <button type="button" class="btn btn-primary mx-2 save_btn">Save</button>
-                                            <button type="button" class="btn btn-warning update_btn">Update</button>
-                                            <button type="button" class="btn btn-info mx-2 delete_btn">Delete</button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+
+    <style>
+        /* styles.css */
+body {
+    font-family: Arial, sans-serif;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    color: red;
+}
+
+/* Modal styling */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    width: 400px;
+    position: relative;
+}
+
+.closeBtn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+    </style>
+</head>
+
+<body>
+    <h1>Customer Management</h1>
+    <button id="addCustomerBtn">Add Customer</button>
+    <table id="customerTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Salary</th>
+                <th>Address</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Customer data will be populated here -->
+        </tbody>
+    </table>
+
+    <!-- Modal for adding/updating customer details -->
+    <div id="customerModal" class="modal">
+        <div class="modal-content">
+            <span class="closeBtn">&times;</span>
+            <h2 id="modalTitle">Add Customer</h2>
+            <form id="customerForm">
+                <input type="hidden" id="customerId">
+                <label for="customerName">Name:</label>
+                <input type="text" id="customerName" required>
+                <label for="customerSalary">Salary:</label>
+                <input type="number" id="customerSalary" required>
+                <label for="customerAddress">Address:</label>
+                <input type="text" id="customerAddress" required>
+                <button type="submit">Save</button>
+            </form>
         </div>
-    
-    
-    
-        <section class="row mt-3 ">
-            <div class="col">
-                <table class="table table-hover table-borderless table-striped caption-top">
-                    <caption>All Customers</caption>
-                    <thead class="text-success rounded-3" style="background-color: #2d3d2d">
-    
-                        <tr id="trr" class="text-success">
-                            <th>CustomerID</th>
-                            <th>CustomerName</th>
-                            <th>CustomerAddress</th>
-                            <th>Salary</th>
-                        </tr>
-                    </thead>
-                    <tbody id="customerTable">
-    
-                    </tbody>
-                </table>
-            </div>
     </div>
+
+    <!-- <script src="scripts.js"></script> -->
+    <script>
+        // scripts.js
+
+            document.addEventListener('DOMContentLoaded', function () {
+                const customers = [];
+                let nextCustomerId = 1;
+
+                const addCustomerBtn = document.getElementById('addCustomerBtn');
+                const customerModal = document.getElementById('customerModal');
+                const closeBtn = document.querySelector('.closeBtn');
+
+                addCustomerBtn.onclick = () => {
+                    openCustomerModal();
+                };
+
+                closeBtn.onclick = () => {
+                    customerModal.style.display = 'none';
+                };
+
+                window.onclick = (event) => {
+                    if (event.target == customerModal) {
+                        customerModal.style.display = 'none';
+                    }
+                };
+
+                document.getElementById('customerForm').onsubmit = (e) => {
+                    e.preventDefault();
+                    saveCustomer(customers);
+                };
+
+                loadCustomers(customers);
+
+                function loadCustomers(customers) {
+                    const tableBody = document.querySelector('#customerTable tbody');
+                    tableBody.innerHTML = '';
+                    customers.forEach(customer => {
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                <td>${customer.id}</td>
+                <td>${customer.name}</td>
+                <td>${customer.salary}</td>
+                <td>${customer.address}</td>
+                <td>
+                    <button class="updateBtn" onclick="openCustomerModal(${customer.id}, '${customer.name}', ${customer.salary}, '${customer.address}')">✏️</button>
+                    <button class="deleteBtn" onclick="deleteCustomer(${customer.id}, this, customers)">🗑️</button>
+                </td>
+            `;
+                        tableBody.appendChild(row);
+                    });
+                }
+
+                function openCustomerModal(id = '', name = '', salary = '', address = '') {
+                    document.getElementById('customerId').value = id;
+                    document.getElementById('customerName').value = name;
+                    document.getElementById('customerSalary').value = salary;
+                    document.getElementById('customerAddress').value = address;
+                    document.getElementById('modalTitle').textContent = id ? 'Update Customer' : 'Add Customer';
+                    customerModal.style.display = 'block';
+                }
+
+                function saveCustomer(customers) {
+                    const id = document.getElementById('customerId').value;
+                    const name = document.getElementById('customerName').value;
+                    const salary = document.getElementById('customerSalary').value;
+                    const address = document.getElementById('customerAddress').value;
+
+                    if (id) {
+                        // Update existing customer
+                        const customer = customers.find(c => c.id == id);
+                        customer.name = name;
+                        customer.salary = salary;
+                        customer.address = address;
+                    } else {
+                        // Add new customer
+                        const newCustomer = {
+                            id: nextCustomerId++,
+                            name: name,
+                            salary: salary,
+                            address: address
+                        };
+                        customers.push(newCustomer);
+                    }
+
+                    loadCustomers(customers);
+                    customerModal.style.display = 'none';
+                }
+
+                function deleteCustomer(id, button, customers) {
+                    if (confirm(`Are you sure you want to delete customer ${id}?`)) {
+                        const index = customers.findIndex(customer => customer.id == id);
+                        if (index !== -1) {
+                            customers.splice(index, 1);
+                            const row = button.parentNode.parentNode;
+                            row.remove();
+                        }
+                    }
+                }
+
+                // Expose functions to global scope to be callable from inline event handlers
+                window.openCustomerModal = openCustomerModal;
+                window.deleteCustomer = deleteCustomer;
+            });
+
+    </script>
 </body>
 
 </html>
